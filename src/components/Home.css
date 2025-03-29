@@ -1,0 +1,38 @@
+/* responsive.css */
+#navbar{
+    background-color: rgb(241, 241, 241);
+}
+/* Mobile (max-width: 768px) pe sidebar hidden rahega */
+@media (max-width: 768px) {
+    .sidebar-container {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100vh;
+      background: white;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      transition: left 0.3s ease-in-out;
+      z-index: 1000;
+    }
+  
+    /* Sidebar Open */
+    .sidebar-container.open {
+      left: 0;
+    }
+    #navbar {
+      background-color: white;
+    }
+    /* Sidebar Toggle Button */
+    .sidebar-toggle {
+      display: block;
+    }
+  }
+  
+  /* Desktop (min-width: 769px) pe sidebar always visible rahega */
+  @media (min-width: 769px) {
+    .sidebar-toggle {
+      display: none;
+    }
+  }
+  
